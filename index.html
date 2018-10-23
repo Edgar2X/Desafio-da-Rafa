@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Add Your favicon here -->  
+  <link rel="icon" href="img/agil-simbol.ico">
+
+
+  <title>JOGUE BEM</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animation CSS -->
+  <link href="css/animate.min.css" rel="stylesheet">
+
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalGames" role="dialog">
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times</button>
+            <h4 class="modal-title"><center><strong style="color: green;">Carrinho</strong></center></h4>
+            <div class="modal-body">
+              <div class="row">
+                <!-- div tel-->
+                <div class="col-md-3 god col-xs-3">
+
+                </div>
+                <div class="col-md-2 god col-xs-2"><strong style="color: green;">God of War</strong></div>
+                <div class="col-md-4 col-md-push-1 god col-xs-4 col-xs-push-1"><strong style="color: green;" id="divTel"></strong></div>
+                <div class="col-md-3 god col-xs-3"><button type="button" class="close" id="god2"><p class="resource">&times</p></button></div>
+              </div>
+              <!-- div tel-->
+              <!-- div mal-->
+              <div class="row">
+                <div class="col-md-3 god col-xs-3">
+
+                </div>
+                <div class="col-md-2 res col-xs-2"><strong style="color: green;">Resident Evil 7</strong></div>
+                <div class="col-md-4 col-md-push-1 res col-xs-4 col-xs-push-1"><strong style="color: green;" id="divMal"></strong></div>
+                <div class="col-md-3 res"><button type="button" class="close" id="res2"><p class="resource">&times</p></button></div>
+              </div>
+
+              <!-- div mal-->
+              <!-- div liv-->
+              <div class="row">
+                <div class="col-md-3 gta col-xs-3">
+
+                </div>
+                <div class="col-md-2 gta col-xs-2"><strong style="color: green;">GTA V</strong></div>
+                <div class="col-md-4 col-md-push-1 gta col-xs-4 col-xs-push-1"><strong style="color: green;" id="divLiv"></strong></div>
+                <div class="col-md-3 gta col-xs-3"><button type="button" class="close" id="gta2"><p class="resource">&times</p></button></div>
+              </div>
+
+              <!-- div liv-->
+              <!-- div car-->
+              <div class="row">
+                <div class="col-md-3 fifa col-xs-3">
+                </div>
+                <div class="col-md-2 fifa col-xs-2"><strong style="color: green;">Fifa</strong></div>
+                <div class="col-md-4 col-md-push-1 fifa col-xs-4 col-xs-push-1"><strong style="color: green;" id="divCar"></strong></div>
+                <div class="col-md-3 fifa col-xs-3"><button type="button" class="close" id="fifa2"><p class="resource">&times</p></button></div>
+              </div>
+
+              <!-- div car-->
+              <!-- div cam-->
+              <div class="row">
+                <div class="col-md-3 forza col-xs-3">
+
+                </div>
+                <div class="col-md-2 forza col-xs-2"><strong style="color: green;">Forza Horizon</strong></div>
+                <div class="col-md-4 col-md-push-1 forza col-xs-4 col-xs-push-1"><strong style="color: green;" id="divCam"></strong></div>
+                <div class="col-md-3 forza col-xs-3"><button type="button" class="close" id="forza2"><p class="resource">&times</p></button></div>
+              </div>
+
+              <!-- div cam-->
+              <!-- div bic-->
+              <div class="row">
+                <div class="col-md-3 mario col-xs-3">
+                </div>
+                <div class="col-md-2 mario col-xs-2"><strong style="color: green;">Super Mario</strong></div>
+                <div class="col-md-4 col-md-push-1 mario col-xs-4 col-xs-push-1"><strong style="color: green;" id="divBic"></strong></div>
+                <div class="col-md-3 mario col-xs-3  "><button type="button" class="close" id="mario2"><p class="resource">&times</p></button></div>
+              </div>
+
+              <!-- div bic-->
+
+
+
+
+
+
+
+            </div>
+            <center><strong style="color: green;" id="total">Total: R$00,00</strong></center>
+            <div class="modal-footer">
+              <div class="row">
+                <div class="col-md-4 col-xs-4">
+                  <button type="button" class="btn btn-change" data-dismiss="modal" style="color: green;"><strong>Cancelar</button>
+                </div>
+                <div class="col-md-8 col-xs-8">
+                  <button type="button" class="btn btn-change" id="compraReal" style="color: green;"><strong>Comprar</strong></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <section id="features" class="container services">
+      <p><strong><h3 id="itemselec" class="wow fadeInLeft">Opções de Jogos:</h3></strong></p>
+      <br>
+      <div class="row">
+
+        <!-- 1 -->
+        <div class="col-md-2 col-xs-6">
+
+          <div class="card card-margin ui wow fadeInLeft">
+
+            <tr>
+
+              <td width="500">
+                <label class="container">
+                  <input type="checkbox" id="check_phone">
+                  <span class="checkmark"></span>
+                </label>
+                <br>
+                <center><img src="god.png" alt="..." width="100" height="100" class="img-roundend"></center>
+              </td></tr>
+              <div class="card card-body">
+                <center><h1></h1></center>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="col-md-2 col-xs-6">
+            <div class="card card-margin ui wow fadeInLeft">
+              <tr>
+                <td width="500">
+                 <label class="container">
+                  <input type="checkbox" id="check_briefcase">
+                  <span class="checkmark"></span>
+                </label>
+                <br>
+                <center><img src="resident.jpg" alt="..." width="100" height="100" class="img-roundend"></i></center>
+              </td></tr>
+              <div class="card card-body">
+                <center><h1></h1></center>
+
+              </div>
+
+            </div>
+          </div> 
+
+          <!-- 3 -->
+          <div class="col-md-2 col-xs-6">
+            <div class="card card-margin ui wow fadeInLeft">
+              <tr>
+                <td width="500">
+                  <label class="container">
+                    <input type="checkbox" id="check_book">
+                    <span class="checkmark"></span>
+                  </label>
+                  <br>
+                  <center><img src="gta.jpg" alt="..." width="100" height="100" class="img-roundend"></center>
+                </td></tr>
+                <div class="card card-body">
+                  <center><h1></h1></center>
+
+                </div>
+
+              </div>
+            </div> 
+
+            <!-- 4 -->
+            <div class="col-md-2 col-xs-6">
+              <div class="card card-margin ui wow fadeInRight">
+                <tr>
+                  <td width="500">
+                    <label class="container">
+                      <input type="checkbox" id="check_car">
+                      <span class="checkmark"></span>
+                    </label>
+                    <br>
+                    <center><img src="fifa.jpg" alt="..." width="100" height="100" class="img-roundend"></center>
+                  </td></tr>
+                  <div class="card card-body">
+                    <center><h1></h1></center>
+
+                  </div>
+
+                </div>
+              </div> 
+
+              <!-- 5 -->
+              <div class="col-md-2 col-xs-6">
+                <div class="card card-margin ui wow fadeInRight">
+                  <tr>
+                    <td width="500">
+                      <label class="container">
+                        <input type="checkbox" id="check_camera">
+                        <span class="checkmark"></span>
+                      </label>
+                      <br>
+                      <center><img src="forza.jpeg" alt="..." width="100" height="100" class="img-roundend"></center>
+                    </td></tr>
+                    <div class="card card-body">
+                      <center><h1></h1></center>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="col-md-2 col-xs-6 ">
+                  <div class="card card-margin ui wow fadeInRight">
+                    <tr>
+                      <td width="500">  
+                        <label class="container">
+                          <input type="checkbox" id="check_bicycle">
+                          <span class="checkmark"></span>
+                        </label>
+                        <br>
+                        <center><img src="mario.png" alt="..." width="100" height="100" class="img-roundend"></center>
+                      </td></tr>
+                      <div class="card card-body">
+                        <center><h1></h1></center>
+
+                      </div>
+
+                    </div>
+                  </div>  
+
+
+
+                </div>
+                <!-- btn -->
+                <br>
+                <div class="row">
+                  <div class="col-md-3 col-md-push-10 wow fadeInRight col-xs-4 col-xs-push-6 " >
+
+                    <button type="button" class="btn btn-change btn-size" data-toggle="modal" data-target="#modalGames" style="color: green;">
+                      <strong>Confimar Compra</strong></button>
+                    </div>
+                  </div>
+
+
+
+
+                  <script src="js/jquery-2.1.1.js"></script>
+                  <script src="js/pace.min.js"></script>
+                  <script src="js/bootstrap.min.js"></script>
+                  <script src="js/classie.js"></script>
+                  <script src="js/cbpAnimatedHeader.js"></script>
+                  <script src="js/wow.min.js"></script>
+                  <script src="js/inspinia.js"></script>
+                </body>
+                </html>
+                <script type="text/javascript">
+                  $('.god').hide();
+                  $('.res').hide();
+                  $('.fifa').hide();
+                  $('.forza').hide();
+                  $('.mario').hide();
+                  $('.gta').hide();
+                  var precoTel = 100;
+                  var precoMal = 100;
+                  var precoLiv = 200;
+                  var precoCar = 250;
+                  var precoCam = 150;
+                  var precoBic = 200;
+                  var checks = [];
+                  $('#check_phone').click( function(){
+                    if ($('#check_phone').prop("checked")) {
+
+                      checks.push(precoTel);
+                      atualizaSelect(checks);
+                      resultadoCompra(checks);
+                      $('.god').show();
+                    }else{
+                      for (var i = 0; i < 6; i++) {
+
+                        if(checks[i] == precoTel ){
+                         checks.splice(i,1);
+                         atualizaSelect(checks);
+                         resultadoCompra(checks);
+                       }
+                     }
+                     $('.god').hide();
+
+                   }
+                 });
+                  $('#check_briefcase').click( function(){
+                    if ($('#check_briefcase').prop("checked")) {
+
+                      checks.push(precoMal);
+                      atualizaSelect(checks);
+                      resultadoCompra(checks);
+                      $('.res').show();
+                    }else{
+                      for (var i = 0; i < 6; i++) {
+
+                        if(checks[i] == precoMal ){
+                         checks.splice(i,1);
+                         atualizaSelect(checks);
+                         resultadoCompra(checks);
+                       }
+                     }
+                     $('.res').hide();
+
+                   }
+                 });
+                  $('#check_car').click( function(){
+                    if ($('#check_car').prop("checked")) {
+
+                      checks.push(precoCar);
+                      atualizaSelect(checks);
+                      resultadoCompra(checks);
+                      $('.fifa').show();
+
+                    }else{
+                      for (var i = 0; i < 6; i++) {
+
+                        if(checks[i] == precoCar ){
+                         checks.splice(i,1);
+                         atualizaSelect(checks);
+                         resultadoCompra(checks);
+                       }
+                     }
+                     $('.fifa').hide();
+
+
+                   }
+                 });
+                  $('#check_camera').click( function(){
+                    if ($('#check_camera').prop("checked")) {
+
+                      checks.push(precoCam);
+                      atualizaSelect(checks);
+                      resultadoCompra(checks);
+                      $('.forza').show();
+
+                    }else{
+                      for (var i = 0; i < 6; i++) {
+
+                        if(checks[i] == precoCam ){
+                         checks.splice(i,1);
+                         atualizaSelect(checks);
+                         resultadoCompra(checks);
+                       }
+                     }
+                     $('.forza').hide();
+
+                   }
+                 });
+                  $('#check_book').click( function(){
+                    if ($('#check_book').prop("checked")) {
+
+                      checks.push(precoLiv);
+                      atualizaSelect(checks);
+                      resultadoCompra(checks);
+                      $('.gta').show();
+
+                    }else{
+                      for (var i = 0; i < 6; i++) {
+
+                        if(checks[i] == precoLiv ){
+                         checks.splice(i,1);
+                         atualizaSelect(checks);
+                         resultadoCompra(checks);
+                       }
+                     }
+                     $('.gta').hide();
+
+
+                   }
+                 });
+                  $('#check_bicycle').click( function(){
+                    if ($('#check_bicycle').prop("checked")) {
+
+                      checks.push(precoBic);
+                      atualizaSelect(checks);
+                      resultadoCompra(checks);
+                      $('.mario').show();
+
+                    }else{
+                      for (var i = 0; i < 6; i++) {
+
+                        if(checks[i] == precoBic ){
+                         checks.splice(i,1);
+                         atualizaSelect(checks);
+                         resultadoCompra(checks);
+
+                       }
+                     }
+                     $('.mario').hide();
+
+
+                   }
+                 });
+                  $('#divTel').text(" R$ "+precoTel+",00");
+                  $('#divCar').text(" R$ "+precoCar+",00");
+                  $('#divCam').text(" R$ "+precoCam+",00");
+                  $('#divMal').text(" R$ "+precoMal+",00");
+                  $('#divLiv').text(" R$ "+precoLiv+",00");
+                  $('#divBic  ').text(" R$ "+precoBic+",00");
+                  function resultadoCompra(checks){
+                    var total = 0;
+                    for(var i = 0;i < checks.length;i++){
+
+                     total += checks[i];
+                   }
+                   $('#total').text("Total: R$"+total+",00");
+                 }
+                 function atualizaSelect(checks){
+                  $('#itemselec').text('Itens selecionados: '+ checks.length);
+                }
+                $('#god2').click(function(){
+                  for (var i = 0; i < 6; i++) {
+
+                    if(checks[i] == precoTel ){
+                     checks.splice(i,1);
+                     atualizaSelect(checks);
+                     resultadoCompra(checks);
+                   }
+                 }
+                 $('.god').hide();
+                 $('#check_phone').prop("checked",false);
+               });
+                $('#res2').click(function(){
+                  for (var i = 0; i < 6; i++) {
+
+                    if(checks[i] == precoMal ){
+                     checks.splice(i,1);
+                     atualizaSelect(checks);
+                     resultadoCompra(checks);
+                   }
+                 }
+                 $('.res').hide();
+                 $('#check_briefcase').prop("checked",false);
+               });
+                $('#fifa2').click(function(){
+                  for (var i = 0; i < 6; i++) {
+
+                    if(checks[i] == precoCar ){
+                     checks.splice(i,1);
+                     atualizaSelect(checks);
+                     resultadoCompra(checks);
+                   }
+                 }
+                 $('.fifa').hide();
+                 $('#check_car').prop("checked",false);
+
+               });
+
+                $('#forza2').click(function(){
+                  for (var i = 0; i < 6; i++) {
+
+                    if(checks[i] == precoCam ){
+                     checks.splice(i,1);
+                     atualizaSelect(checks);
+                     resultadoCompra(checks);
+                   }
+                 }
+                 $('.forza').hide();
+                 $('#check_camera').prop("checked",false);
+
+               });
+                $('#gta2').click(function(){
+                  for (var i = 0; i < 6; i++) {
+
+                    if(checks[i] == precoLiv ){
+                     checks.splice(i,1);
+                     atualizaSelect(checks);
+                     resultadoCompra(checks);
+                   }
+                 }
+                 $('.gta').hide();
+                 $('#check_book').prop("checked",false);
+
+               });
+                $('#mario2').click(function(){
+                  for (var i = 0; i < 6; i++) {
+
+                    if(checks[i] == precoBic ){
+                     checks.splice(i,1);
+                     atualizaSelect(checks);
+                     resultadoCompra(checks);
+
+                   }
+                 }
+                 $('.mario').hide();
+                 $('#check_bicycle').prop("checked",false);
+
+               });
+                $('#compraReal').click(function(){
+                  alert('Comprar realizada com sucesso !!!');
+                  window.location.reload(true)
+                });
+              </script>
